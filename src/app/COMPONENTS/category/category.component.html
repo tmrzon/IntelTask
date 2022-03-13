@@ -1,0 +1,12 @@
+<h3 class="center">{{category.key}}</h3>
+<div class="wrapper">
+    <div *ngFor="let api of category.value" class="card m-2" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">{{api.API}}</h5>
+            <p class="card-text bold">{{api.Description}}</p>
+            <p class="card-text">Cors: {{api.Cors}}</p>
+            <p class="card-text">Category: {{api.Category}}</p>
+            <a [attr.href]="api.Link" target="_blank" class="btn btn-link">{{api.Link}}</a>
+        </div>
+    </div>
+</div>
