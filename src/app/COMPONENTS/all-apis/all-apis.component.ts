@@ -19,7 +19,6 @@ export class AllApisComponent implements OnInit {
   ngOnInit(): void {
     this.subscription.add(this.httpSer.getAllApis().subscribe((data) => {
       this.apis = data.entries;
-      this.httpSer.dispatcherApi.next(this.apis);
     }));
 
   }

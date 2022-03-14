@@ -9,7 +9,6 @@ export class HttpService {
 
   constructor(private httpClient: HttpClient) { }
 
-  dispatcherApi: Subject<any> = new Subject();
   getAllApis(): Observable<any> {
     return this.httpClient.get<any>('https://api.publicapis.org/entries');
   }
